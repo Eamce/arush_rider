@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.raiderdelivery_v4.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_for_confirmation"
+        android:name="com.example.raiderdelivery_v4.ui.for_confirmation.ForConfirmationFragment"
+        android:label="@string/menu_for_confirmation"
+        tools:layout="@layout/fragment_for_confirmation" />
+
+    <fragment
+        android:id="@+id/nav_transaction"
+        android:name="com.example.raiderdelivery_v4.ui.transaction.food.TransactionFragment"
+        android:label="@string/menu_transaction"
+        tools:layout="@layout/fragment_transaction" />
+
+    <fragment
+        android:id="@+id/nav_repots"
+        android:name="com.example.raiderdelivery_v4.ui.reports.food.ReportsFragment"
+        android:label="@string/menu_transaction"
+        tools:layout="@layout/fragment_reports" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.example.raiderdelivery_v4.ui.history.food.HistoryFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.raiderdelivery_v4.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.raiderdelivery_v4.ui.account.AccountFragment"
+        android:label="@string/menu_account"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.raiderdelivery_v4.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+</navigation>

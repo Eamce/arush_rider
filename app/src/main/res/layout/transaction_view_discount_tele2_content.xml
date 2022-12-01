@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="8dip"
+    android:paddingTop="1dip"
+    android:paddingEnd="8dip"
+    android:paddingBottom="1dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginBottom="20dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".75">
+
+            <ImageView
+                android:id="@+id/iv_discount_image"
+                android:background="@drawable/ic_broken_image_gray_24dp"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".25"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_discount_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textColor="@color/teal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_discount_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount Type:"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_discount_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount No:"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_discount_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/teal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="CAMERA"
+                    android:onClick="OnClickCamera"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:drawablePadding="2dp"
+                    android:drawableLeft="@drawable/ic_baseline_camera_24" />
+
+                <Button
+                    android:id="@+id/btn_discount_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orange"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="CANCEL"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:drawablePadding="2dp"
+                    android:onClick="OnClickCancel"
+                    android:drawableLeft="@drawable/ic_baseline_cancel_presentation_24"/>
+
+                <Button
+                    android:id="@+id/btn_discount_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/thegreen"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="CONFIRM"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:drawablePadding="2dp"
+                    android:onClick="OnClickConfirm"
+                    android:drawableLeft="@drawable/ic_baseline_check_circle_outline_24"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+

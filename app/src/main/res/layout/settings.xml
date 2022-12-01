@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_white">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="10dip"
+        android:padding="10dip">
+    <TextView
+        android:id="@+id/tv_settings"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/settings"
+        android:textSize="20sp"
+        android:textColor="@color/teal"
+        android:layout_marginBottom="20dip"/>
+
+    <RadioGroup
+        android:id="@+id/rg_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/rb_food"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Food"
+        android:textSize="20sp"
+        android:scaleX="0.9"
+        android:scaleY="0.9" />
+
+    <RadioButton
+        android:id="@+id/rb_grocery"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Grocery"
+        android:textSize="20sp"
+        android:scaleX="0.9"
+        android:scaleY="0.9" />
+
+    </RadioGroup>
+
+     <Button
+        android:id="@+id/btn_update"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/update"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dip"/>
+
+<!--    <Button-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="@string/update"-->
+<!--        android:background="@color/white"-->
+<!--        android:textColor="@color/orange"-->
+<!--        android:layout_marginTop="20dip"-->
+<!--        android:drawableLeft="@drawable/ic_view_list_orange_24dp" />-->
+    </LinearLayout>
+</LinearLayout>

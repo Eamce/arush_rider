@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.raiderdelivery_v4"
+    tools:ignore="LockedOrientationActivity">
+    <!-- <uses-sdk -->
+    <!-- android:targetSdkVersion="23" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Alturush Rider"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.chatbox.ChatboxTicketsList"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <!-- <activity android:name=".MainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:label="Home"
+            android:parentActivityName=".ui.login.Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.home.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ui.for_confirmation.ForConfirmationActivity"
+            android:label="For Confirmation"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.for_confirmation.ForConfirmationActivity" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.food.TransactionActivity"
+            android:label="Transactions(Food/Electronics and Appliances)"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.food.TransactionActivity" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.grocery.GCTransactionActivity"
+            android:label="Transactions(Grocery)"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.grocery.GCTransactionActivity" />
+        </activity>
+        <activity
+            android:name=".ui.history.food.HistoryActivity"
+            android:label="History(Food/Electronics and Appliances)"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.food.TransactionActivity" />
+        </activity>
+        <activity
+            android:name=".ui.account.AccountActivity"
+            android:label="Account"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.account.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".ui.reports.food.ReportsActivity"
+            android:label="Reports(Food/Electronics and Appliances)"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.reports.food.ReportsActivity" />
+        </activity>
+        <activity
+            android:name=".ui.reports.food.ReportsDelivered"
+            android:label="Delivered Report(Food/Electronics and Appliances)"
+            android:parentActivityName=".ui.reports.food.ReportsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.reports.food.ReportsDelivered" />
+        </activity>
+        <activity
+            android:name=".ui.reports.food.ReportsUndelivered"
+            android:label="Undelivered Report(Food/Electronics and Appliances)"
+            android:parentActivityName=".ui.reports.food.ReportsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.reports.food.ReportsUndelivered" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.food.TransactionViewItems"
+            android:label="Transactions(Food/Electronics and Appliances)"
+            android:parentActivityName=".ui.transaction.food.TransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.food.TransactionViewItems" />
+        </activity>
+        <activity
+            android:name=".ui.account.AccountChangePassword"
+            android:label="Account"
+            android:parentActivityName=".ui.account.AccountActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.account.AccountChangePassword" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.food.TransactionViewTimeFrame2"
+            android:label="Account"
+            android:parentActivityName=".ui.transaction.food.TransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.food.TransactionViewTimeFrame2" />
+        </activity>
+        <activity
+            android:name=".ui.account.AccountViewDetails"
+            android:label="Account"
+            android:parentActivityName=".ui.account.AccountActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.account.AccountViewDetails" />
+        </activity>
+        <activity
+            android:name=".ui.account.AccountChangePicture"
+            android:label="Change Picture"
+            android:parentActivityName=".ui.account.AccountActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.account.AccountChangePicture" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.food.TransactionViewCustomerDetails"
+            android:label="Customer Details"
+            android:parentActivityName=".ui.transaction.food.TransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.food.TransactionViewCustomerDetails" />
+        </activity>
+        <activity
+            android:name=".ui.reports.food.ReportsCancelled"
+            android:label="Cancelled Reports"
+            android:parentActivityName=".ui.reports.food.ReportsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.reports.food.ReportsCancelled" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.food.TransactionViewDiscountNotTele"
+            android:label="Discount"
+            android:parentActivityName=".ui.transaction.food.TransactionViewDiscountNotTele"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.food.TransactionViewDiscountNotTele" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.food.TransactionViewDiscountTele"
+            android:label="Camera"
+            android:parentActivityName=".ui.transaction.food.TransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.food.TransactionViewDiscountTele" />
+        </activity> <!-- <activity -->
+        <!-- android:name=".ui.transaction.TransactionViewDiscountTele2" -->
+        <!-- android:label="View Discount" -->
+        <!-- android:parentActivityName=".ui.transaction.TransactionViewDiscountTele2" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.PARENT_ACTIVITY" -->
+        <!-- android:value=".ui.transaction.TransactionViewDiscountTele2" /> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.transaction.TransactionViewDiscountTele2" -->
+        <!-- android:label="Alturush Rider" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".ui.login.Login"
+            android:label="Alturush Rider"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.transaction.food.TransactionViewDiscountTele2"
+            android:label="View Discount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.chatbox.ChatboxTenants"
+            android:label="Chat Room(Tenants)"
+            android:parentActivityName=".ui.chatbox.ChatboxUserType"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.chatbox.ChatboxTenants" />
+        </activity>
+        <activity
+            android:name=".ui.chatbox.ChatboxMessages"
+            android:label="Customer Service"
+            android:parentActivityName=".ui.chatbox.ChatboxUsers"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.chatbox.ChatboxMessages" />
+        </activity>
+        <activity
+            android:name=".ui.account.CreateAccount"
+            android:label="Rider`s Registration"
+            android:parentActivityName=".ui.login.Login"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.account.CreateAccount" />
+        </activity>
+        <activity
+            android:name=".ui.account.DataPrivacyConsent"
+            android:label="Privacy Notice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.ForgotPassword"
+            android:label="Forgot Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.OTPCode"
+            android:label="Forgot Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.NewPassword"
+            android:label="New Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.chatbox.ChatboxUserType"
+            android:label="Chat Room(User Type)"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.chatbox.ChatboxUserType" />
+        </activity>
+        <activity
+            android:name=".ui.chatbox.ChatboxUsers"
+            android:label="Chat Room(Users)"
+            android:parentActivityName=".ui.chatbox.ChatboxUserType"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.chatbox.ChatboxUsers" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.grocery.GCTransactionViewItems"
+            android:label=""
+            android:parentActivityName=".ui.transaction.grocery.GCTransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.grocery.GCTransactionViewItems" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.grocery.GCTransactionViewCustomerDetails"
+            android:label=""
+            android:parentActivityName=".ui.transaction.grocery.GCTransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.grocery.GCTransactionViewCustomerDetails" />
+        </activity>
+        <activity
+            android:name=".ui.transaction.grocery.GCTransactionViewTimeFrame"
+            android:label=""
+            android:parentActivityName=".ui.transaction.grocery.GCTransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.transaction.grocery.GCTransactionViewTimeFrame" />
+        </activity>
+        <activity
+            android:name=".ui.history.grocery.GCHistoryActivity"
+            android:label="History(Grocery)"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.history.grocery.GCHistoryActivity" />
+        </activity>
+        <activity
+            android:name=".ui.reports.grocery.GCReportsDelivered"
+            android:label="Delivered Reports(Grocery)"
+            android:parentActivityName=".ui.reports.food.ReportsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.reports.grocery.GCReportsDelivered" />
+        </activity>
+        <activity
+            android:name=".ui.reports.grocery.GCReportsUndelivered"
+            android:label="Undelivered Reports(Grocery)"
+            android:parentActivityName=".ui.reports.food.ReportsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.reports.grocery.GCReportsUndelivered" />
+        </activity>
+        <activity
+            android:name=".ui.reports.grocery.GCReportsCancelled"
+            android:label="Undelivered Reports(Grocery)"
+            android:parentActivityName=".ui.reports.food.ReportsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.reports.grocery.GCReportsCancelled" />
+        </activity>
+    </application>
+
+</manifest>

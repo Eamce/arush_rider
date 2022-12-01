@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Rapid A Rider</string>
+    <string name="app_version">ALTURUSH RIDER v1.0 COPYRIGHT 2020</string>
+    <string name="app_name2">Rider Delivery System</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Unknown</string>
+    <string name="nav_header_subtitle">Rider Incharge</string>
+    <string name="nav_header_subtitle2">Customer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="change_password">Change Password</string>
+    <string name="riders_information">Riders Information</string>
+    <string name="riders_motorcycle_information">Riders Motorcycle Information</string>
+    <string name="riders_picture">Riders Picture</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="birthdate">Birth Date</string>
+    <string name="sex">Sex</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="license_type">License Type</string>
+    <string name="other_details">Other Details</string>
+    <string name="picture">Picture</string>
+    <string name="brand">Brand</string>
+    <string name="model">Model</string>
+    <string name="color">Color</string>
+    <string name="plate_no">Plate Number</string>
+    <string name="old_password1">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="password_message">Password must be 8-16 characters and contain both numbers  and letters/special characters.</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="submit">Submit</string>
+    <string name="camera">CAMERA</string>
+    <string name="upload">UPLOAD</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="settings">Choose category:</string>
+    <string name="update">Update</string>
+    <string name="report">Generate</string>
+    <string name="time_frame">Time Frame</string>
+    <string name="app_submitted">Order Submitted</string>
+    <string name="food_prep">Food Preparation/Time Consumed</string>
+    <string name="food_prep_details">(Order Submission -> For Pick-up tagging)</string>
+    <string name="pickup">Picking Assignment/Time Consumed</string>
+    <string name="pickup_details">(For Pick-up tagging -> Rider Set-up)</string>
+    <string name="intransit">Order Claiming/Time Consumed</string>
+    <string name="intransit_details">(Rider Set-up -> In Transit tagging by tenant)</string>
+    <string name="delivered">Delivery Period/Time Consumed</string>
+    <string name="delivered_details">(In Transit tagging by tenant -> Customer)</string>
+    <string name="close">Close</string>
+    <string name="rider_details">Rider Details</string>
+    <string name="r_id_num">Rider ID#</string>
+    <string name="r_name">Rider Name</string>
+    <string name="r_birthdate">Rider Birthday</string>
+    <string name="r_gender">Rider Gender</string>
+    <string name="r_address">Rider Address</string>
+    <string name="r_mobile">Rider Contact#</string>
+    <string name="r_license">Rider License</string>
+    <string name="r_other_details">Rider Other Details</string>
+    <string name="r_zone">Rider Zone</string>
+    <string name="r_motorcycle">Rider Motorcycle</string>
+    <string name="r_plateno">Rider Plate#</string>
+    <string name="r_motorcycle_other_details">Rider Motorcycle Other Details</string>
+    <string name="r_bcode">Rider Business Unit</string>
+    <string name="r_username">Rider Username</string>
+    <string name="r_created_at">Rider Created at</string>
+    <string name="change_picture">Change Picture</string>
+    <string name="select">Select Image</string>
+    <string name="selected_image">selected_image.png</string>
+    <string name="save">Save</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_for_confirmation">For Confirmation</string>
+    <string name="menu_transaction">Transaction</string>
+    <string name="menu_reports">Reports</string>
+    <string name="menu_history">History</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_account">Account</string>
+    <string name="menu_logout">Logout</string>
+
+    <string name="tab_text_1">Personal Care</string>
+    <string name="tab_text_2">Cleaners</string>
+    <string name="tab_text_3">Paper Goods</string>
+    <string name="tab_text_4">Jarred Goods</string>
+    <string name="tab_text_5">Others</string>
+
+    <string name="customer_details">Customer Details:</string>
+    <string name="address1">Address1(House#/Street/Barangay/Town):</string>
+    <string name="address1_landmark">Address1(Landmark):</string>
+    <string name="address2">Address2(House#/Street/Barangay/Town):</string>
+    <string name="address2_landmark">Address2(Landmark):</string>
+    <string name="address3">Address3(House#/Street/Barangay/Town):</string>
+    <string name="address3_landmark">Address3(Landmark):</string>
+    <string name="mobile_no1">Mobile No1:</string>
+    <string name="mobile_no2">Mobile No2:</string>
+    <string name="mobile_no3">Mobile No3:</string>
+
+    <string-array name="Planets">
+        <item>Sun</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+    <string name="usernameReg">Username</string>
+    <string name="emailReg">Email</string>
+    <string name="passwordReg">Password</string>
+    <string name="sign_upReg">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="cancel">Cancel</string>
+    <string name="signin_redirect">Already a member? Sign in!</string>
+    <string name="no_account_yet">Dont have an account yet?</string>
+    <string name="create_account">Sign Up</string>
+    <string name="show_password">Show password</string>
+    <string name="signup_redirect">Don\'t have an account? Register here!</string>
+</resources>

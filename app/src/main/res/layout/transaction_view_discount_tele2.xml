@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_discount_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight=".10">
+
+        <ListView
+            android:id="@+id/lv_discount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_discounts_noresults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_discounts_noresult"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/no_results"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_discounts_noresults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Results"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_discount_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".90"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+        android:id="@+id/btn_discount_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/orange"
+        android:text="SUBMIT"
+        android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_discount_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/orange"
+            android:visibility="gone"
+            android:text="CANCEL"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

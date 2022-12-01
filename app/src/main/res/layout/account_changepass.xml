@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_vpn_key_teal_24dp" />
+
+        <TextView
+            android:id="@+id/tv_change_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text="@string/change_password"
+            android:textColor="@color/teal"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_old_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/old_password1"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_old_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tv_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_password"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_password_message"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/password_message"-->
+<!--            android:textColor="@color/red"-->
+<!--            android:textSize="15sp"-->
+<!--            android:visibility="gone"/>-->
+
+        <TextView
+            android:id="@+id/tv_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_password"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/cb_showchangepassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/show_password" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/teal"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_changepass_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="@color/orange"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
