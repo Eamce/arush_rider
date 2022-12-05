@@ -108,6 +108,7 @@ public class TransactionAdapter extends ArrayAdapter<DownloadedTransactionData> 
         String str_instructions = getItem(position).getInstructions();
         String str_submit_status = getItem(position).getSubmit_status();
         String str_payment_platform = getItem(position).getPayment_platform();
+        String ticket_id = getItem(position).getTicket_id();
 
         int a = getCount();
 
@@ -231,7 +232,7 @@ public class TransactionAdapter extends ArrayAdapter<DownloadedTransactionData> 
         holder.holddontransit.setTag(str_ticket_no);
         holder.holddelivered.setTag(str_ticket_no + "|" + str_submit_status + "|" + str_payment_platform);
         holder.holdname.setTag(name);
-        holder.holdview.setTag(str_ticket_no + "|" + name + "|" + str_total_charges + "|" + cus_id + "|" + order_from + "|" + name);
+        holder.holdview.setTag(str_ticket_no + "|" + name + "|" + str_total_charges + "|" + cus_id + "|" + order_from + "|" + name +"|"+ticket_id);
         holder.holdinstructions.setText("Instructions: " + str_instructions);
         holder.holdpaymentplatform.setText("Payment Method: " + str_payment_platform);
 

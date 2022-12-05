@@ -83,17 +83,18 @@ public class ChatboxUsers extends AppCompatActivity {
                 ArrayList<HashMap<String, String>> detailss = new ArrayList<HashMap<String, String>>();
                 try {
                     thedata = new JSONArray(data);
-                    String ticket_id, name, login_status;
+                    String id, name, login_status;
                     if (thedata.length() > 0)
                     {
                         for (int a = 0; a < thedata.length(); a++)
                         {
                             JSONArray row = thedata.getJSONArray(a);
-                            ticket_id = row.getString(0);
+                            id = row.getString(0);
                             name = row.getString(1);
                             login_status = row.getString(2);
-                            itemrow = new DownloadedChatboxUsers(ticket_id,name, login_status);
+                            itemrow = new DownloadedChatboxUsers(id,name, login_status);
                             itemlist.add(itemrow);
+//                            System.out.println("ITEMLIST" +itemlist);
                            // System.out.println("USER DATA: "+row.getString(a));
                         }
                         adapter = new ChatboxUsersAdapter(ChatboxUsers.this, R.layout.chatbox_users_content, itemlist);
@@ -104,9 +105,12 @@ public class ChatboxUsers extends AppCompatActivity {
                             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                                 final TextView emp_name = (TextView) view.findViewById(R.id.tv_chatbox_name);
                                 String user_name = emp_name.getText().toString();
-                                Intent in = new Intent(ChatboxUsers.this, ChatboxMessages.class);
+//                                Intent in = new Intent(ChatboxUsers.this, ChatboxMessages.class);
+                                Intent in = new Intent(ChatboxUsers.this, ChatboxTicketsList.class);
                                 in.putExtra("user_name", user_name);
-                                in.putExtra("from", "chat");
+                             //   in.putExtra("from", "chat");
+                                Log.e("Rider ID" , globalvars.get("id"));
+                                in.putExtra("id", adapter.getItem(i).getId());
                                 startActivity(in);
                             }
                         });

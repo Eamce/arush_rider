@@ -49,7 +49,7 @@ public class ChatboxMessages extends AppCompatActivity {
     ArrayList<DownloadedChatMessages> itemlist;
     ChatboxAdapter adapter;
     Globalvars globalvars;
-    String user_name, from, ticket_id;
+    String user_name, from, ticket,ticket_id;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,12 +62,11 @@ public class ChatboxMessages extends AppCompatActivity {
         lv_chatbox = findViewById(R.id.lv_chatbox);
 
         Intent i = getIntent();
+        ticket = i.getExtras().getString("ticket");
+        ticket_id = i.getExtras().getString("tcktid");
         user_name = i.getExtras().getString("user_name");
-        ticket_id = i.getExtras().getString("ticket_id");
         from = i.getExtras().getString("from");
-
         this.setTitle(user_name);
-
         execute_pusher();
         load_messages();
 
@@ -241,12 +240,14 @@ public class ChatboxMessages extends AppCompatActivity {
 
         if(from.equalsIgnoreCase("chat"))
         {
-            mo.adddata("user_name", user_name);
-            mo.execute(Globalvars.online_link + "load_messages");
+//            mo.adddata("user_name", user_name);
+//            mo.execute(Globalvars.online_link + "load_messages");
+            mo.adddata("user_name", ticket);
+            mo.execute(Globalvars.online_link + "load_messages_from_transaction");
         }
         else
         {
-            mo.adddata("user_name", ticket_id);
+            mo.adddata("user_name", ticket);
             mo.execute(Globalvars.online_link + "load_messages_from_transaction");
         }
     }
@@ -368,27 +369,25 @@ public class ChatboxMessages extends AppCompatActivity {
                 }
             }
         });
-
-
         String a = globalvars.get("id");
-//        String b = message;
+        String b = message;
         String c = globalvars.get("user_type");
         String d = user_name;
         String e = ticket_id;
-
         mo.adddata("rider_id", globalvars.get("id"));
         mo.adddata("message", message);
         mo.adddata("user_type", globalvars.get("user_type"));
-
         if(from.equalsIgnoreCase("chat"))
         {
-            mo.adddata("receiver_name", user_name);
-            mo.execute(Globalvars.online_link + "sendmessage");
-//            mo.adddata("receiver_name", ticket_id);
-//            mo.execute(Globalvars.online_link + "sendmessage_from_transaction");
+      //      mo.adddata("receiver_name", user_name);
+//            mo.execute(Globalvars.online_link + "sendmessage");
+            mo.adddata("ticket", ticket);
+            mo.adddata("ticket_id", ticket_id);
+            mo.execute(Globalvars.online_link + "sendmessage_from_transaction");
         }
         else
-        {
+        {;
+            mo.adddata("ticket", ticket);
             mo.adddata("ticket_id", ticket_id);
             mo.execute(Globalvars.online_link + "sendmessage_from_transaction");
         }

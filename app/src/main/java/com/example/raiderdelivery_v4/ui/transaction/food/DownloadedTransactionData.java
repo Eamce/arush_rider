@@ -26,8 +26,9 @@ public class DownloadedTransactionData {
     private String instructions;
     private String submit_status;
     private String payment_platform;
+    private String ticket_id;
 
-    public DownloadedTransactionData(String id, String cus_id, String name, String address, String order, String charge, String totalamount, String discount, String view_stat, String ontransit, String delivered, String cancelled,String ticket_no, String contact_no, String no_pack, String order_from, String create_at, String tendered_amount, String change, String change_bu, String main_rider_stat, String count_rider, String instructions, String submit_status, String payment_platform) {
+    public DownloadedTransactionData(String id, String cus_id, String name, String address, String order, String charge, String totalamount, String discount, String view_stat, String ontransit, String delivered, String cancelled,String ticket_no, String contact_no, String no_pack, String order_from, String create_at, String tendered_amount, String change, String change_bu, String main_rider_stat, String count_rider, String instructions, String submit_status, String payment_platform, String ticket_id) {
         this.id = id;
         this.cus_id = cus_id;
         this.name = name;
@@ -53,6 +54,7 @@ public class DownloadedTransactionData {
         this.instructions = instructions;
         this.submit_status = submit_status;
         this.payment_platform = payment_platform;
+        this.ticket_id = ticket_id;
     }
 
     public String getPayment_platform() {
@@ -77,6 +79,18 @@ public class DownloadedTransactionData {
 
     public void setInstructions(String instructions) {
         this.instructions = instructions;
+    }
+
+    public String getCus_id() {
+        return cus_id;
+    }
+
+    public String getTicket_id() {
+        return ticket_id;
+    }
+
+    public void setTicket_id(String ticket_id) {
+        this.ticket_id = ticket_id;
     }
 
     public String getCancelled() {

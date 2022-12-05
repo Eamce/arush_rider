@@ -120,12 +120,12 @@ public class TransactionActivity extends AppCompatActivity {
         };
         startHandler();
 
-        btn_deliver.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+//        btn_deliver.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
     }
 
     @Override
@@ -166,7 +166,7 @@ public class TransactionActivity extends AppCompatActivity {
                 ArrayList<HashMap<String, String>> detailss = new ArrayList<HashMap<String, String>>();
                 try {
                     thedata = new JSONArray(data);
-                    String id, cus_id, ticket_no, fname, lname, fullname, barangay, town, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled,remitted, contact_no, num_pack, del_charge, landmark, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform;
+                    String id, cus_id, ticket_no,ticket_id, fname, lname, fullname, barangay, town, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled,remitted, contact_no, num_pack, del_charge, landmark, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform;
                     int a1 = thedata.length();
                     int b1 = thedata.length();
                     if (thedata.length() > 0) {
@@ -203,6 +203,7 @@ public class TransactionActivity extends AppCompatActivity {
                             instructions = row.getString(26);
                             submit_status = row.getString(27);
                             payment_platform = row.getString(28);
+                            ticket_id = row.getString(29);
                             System.out.println("PAYMENT PLATFORM: " +payment_platform);
                             if(row.getString(27).equalsIgnoreCase("null"))
                             {
@@ -213,12 +214,7 @@ public class TransactionActivity extends AppCompatActivity {
                                 submit_status = row.getString(27);
                             }
 
-                            if(payment_platform.equalsIgnoreCase("null"))
-                            {
-                                payment_platform = "Cash on Delivery";
-                            }
-
-                            itemrow = new DownloadedTransactionData(id, cus_id, fullname, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled, ticket_no, contact_no, num_pack, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform);
+                            itemrow = new DownloadedTransactionData(id, cus_id, fullname, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled, ticket_no, contact_no, num_pack, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform,ticket_id);
                             itemlist.add(itemrow);
                         }
                         adapter = new TransactionAdapter(TransactionActivity.this, R.layout.transaction_content, itemlist);
@@ -240,6 +236,7 @@ public class TransactionActivity extends AppCompatActivity {
             }
         });
         mo.adddata("r_id_num", globalvars.get("r_id_num"));
+        Log.e("R_ID_NUM",globalvars.get("r_id_num"));
         //mo.adddata("bunit_code", globalvars.get("bunit_code"));
         mo.execute(Globalvars.online_link + "get_customer_orders");
     }
@@ -323,7 +320,7 @@ public class TransactionActivity extends AppCompatActivity {
                 ArrayList<HashMap<String, String>> detailss = new ArrayList<HashMap<String, String>>();
                 try {
                     thedata = new JSONArray(data);
-                    String id, cus_id, ticket_no, fname, lname, fullname, barangay, town, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled, remitted, contact_no, num_pack, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform;
+                    String id, cus_id, ticket_no, ticket_id, fname, lname, fullname, barangay, town, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled, remitted, contact_no, num_pack, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform;
                     if (thedata.length() > 0) {
                         for (int a = 0; a < thedata.length(); a++) {
                             JSONArray row = thedata.getJSONArray(a);
@@ -356,6 +353,7 @@ public class TransactionActivity extends AppCompatActivity {
                             count_rider = row.getString(25);
                             instructions = row.getString(26);
                             payment_platform = row.getString(28);
+                            ticket_id = row.getString(29);
                             if(row.getString(27).equalsIgnoreCase("null"))
                             {
                                 submit_status = "1";
@@ -370,7 +368,7 @@ public class TransactionActivity extends AppCompatActivity {
 //                                payment_platform = "Cash on Delivery";
 //                            }
 
-                            itemrow = new DownloadedTransactionData(id, cus_id, fullname, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled, ticket_no, contact_no, num_pack, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform);
+                            itemrow = new DownloadedTransactionData(id, cus_id, fullname, address, order, charge, totalamount, discount, view_stat, ontransit, delivered, cancelled, ticket_no, contact_no, num_pack, order_from, created_at, tendered_amount, change, change_bu, main_rider_stat, count_rider, instructions, submit_status, payment_platform,ticket_id);
                             itemlist.add(itemrow);
                         }
                         no_of_customer = no_of_customer + thedata.length();
@@ -465,21 +463,16 @@ public class TransactionActivity extends AppCompatActivity {
     public void OnClickDelivered(View v) {
         final Button n = (Button) v;
         final String array_string[] = n.getTag().toString().split("\\|");
-        //final String id = n.getTag().toString();
+        Log.e("TAG DELIVER BUTTON",n.getTag().toString());
         String a = array_string[0]; //Ticket No...
         String b = array_string[1]; //Submit Status...
         String c = array_string[2]; //Payment Platform...
-//        Log.e("TICKET NO: ",array_string[0]);
-//        Log.e("SUBMIT STATUS: ",array_string[1]);
-//        Log.e("PAYMENT PLATFORM: ",array_string[2]);
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(TransactionActivity.this);
         builderSingle.setCancelable(false);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(TransactionActivity.this, android.R.layout.simple_list_item_1);
         arrayAdapter.add("Tag as Delivered");
         arrayAdapter.add("Tag as Cancelled");
         arrayAdapter.add("Cancel");
-
-
         builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -528,7 +521,9 @@ public class TransactionActivity extends AppCompatActivity {
 
     public void OnClickView(View v) {
         final Button n = (Button) v;
+
         final String array_string[] = n.getTag().toString().split("\\|");
+        Log.e("DATA: ", n.getTag().toString());
 
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(TransactionActivity.this);
         //builderSingle.setIcon(R.drawable.ic_access_time_black_24dp);
@@ -591,11 +586,14 @@ public class TransactionActivity extends AppCompatActivity {
                     //action if cancelled...
                 }else if (strOption.equalsIgnoreCase("Chat")) {
                     Intent i = new Intent(TransactionActivity.this, ChatboxMessages.class);
-                    i.putExtra("ticket_id", array_string[0]);
+                    i.putExtra("ticket", array_string[0]);
+                    //Log.e("A",array_string);
+                     i.putExtra("tcktid", array_string[6]);
 //                    Log.e("TICKET ID: ",array_string[0]);
                     i.putExtra("user_name", array_string[5]);
                     i.putExtra("from", "transaction");
                     globalvars.set("user_type", "Customer");
+
                     startActivity(i);
                 }else {
 
