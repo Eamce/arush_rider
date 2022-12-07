@@ -79,7 +79,6 @@ public class TransactionActivity extends AppCompatActivity {
 //        Intent intent = getIntent();
 //        str_ticket_id = intent.getExtras().getString("ticket_id");
 //        activity = intent.getExtras().getString("activity");
-
         get_orders();
 
         handler = new Handler();
@@ -143,7 +142,6 @@ public class TransactionActivity extends AppCompatActivity {
     }
 
     public void get_orders() {
-
         itemlist = new ArrayList<>();
         pd = new ProgressDialog(this);
         pd.setMessage("Please wait...");

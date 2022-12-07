@@ -268,7 +268,6 @@ public class TransactionAdapter extends ArrayAdapter<DownloadedTransactionData> 
         if (view_stat.equals("1")) {
             holder.holdview.setBackgroundResource(R.drawable.ic_view_list_teal_24dp);
         }
-
         return convertView;
     }
 

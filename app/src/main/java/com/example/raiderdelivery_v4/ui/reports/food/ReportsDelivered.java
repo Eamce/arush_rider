@@ -60,7 +60,7 @@ public class ReportsDelivered extends AppCompatActivity {
         {
             get_delivered_reports_ol_payment();
         }
-        else if(str_payment_method.equalsIgnoreCase("Cash on Delivery"))
+        else if(str_payment_method.equalsIgnoreCase("COD"))
         {
             get_delivered_reports_cod();
         }

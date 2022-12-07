@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -189,6 +190,8 @@ public class TransactionViewItems extends AppCompatActivity {
 
         String a = globalvars.get("r_id_num");
         String b = getIntent().getExtras().getString("ticket_id");
+        Log.e("R_ID_NUM :  ",globalvars.get("r_id_num"));
+        Log.e("TICKET_ID: ",b);
         mo.adddata("r_id_num", globalvars.get("r_id_num"));
         mo.adddata("ticket_id", getIntent().getExtras().getString("ticket_id"));
         //mo.adddata("bunit_code", globalvars.get("bunit_code"));

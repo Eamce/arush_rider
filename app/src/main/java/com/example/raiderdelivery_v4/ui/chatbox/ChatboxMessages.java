@@ -55,12 +55,10 @@ public class ChatboxMessages extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chatbox_messages);
-
         globalvars = new Globalvars((Context)this,(Activity)this);
         et_message = findViewById(R.id.et_message);
         btn_send = findViewById(R.id.btn_send);
         lv_chatbox = findViewById(R.id.lv_chatbox);
-
         Intent i = getIntent();
         ticket = i.getExtras().getString("ticket");
         ticket_id = i.getExtras().getString("tcktid");
@@ -69,7 +67,6 @@ public class ChatboxMessages extends AppCompatActivity {
         this.setTitle(user_name);
         execute_pusher();
         load_messages();
-
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

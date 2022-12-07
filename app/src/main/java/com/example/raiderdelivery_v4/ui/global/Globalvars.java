@@ -17,7 +17,7 @@ public class Globalvars
     public static String secretKey = "SoAxVBnw8PYHzHHTFBQdG0MFCLNdmGFf";
     public static String EmptyEncrypted = "VDFnOTk0eG8yVUFxRzgxTcHRUrp/3YpLH7mmTEh/nSg=\n";
 
-//    Online(Food)
+   // Online(Food)
 //    public static String online_link = "https://app2.alturush.com/";
 //    public static String online_product_image_link = "https://storetenant.alturush.com/storage/";
 //    public static String online_discount_image_link = "https://storetenant.alturush.com/";

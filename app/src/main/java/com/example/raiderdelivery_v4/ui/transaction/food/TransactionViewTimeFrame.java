@@ -311,7 +311,9 @@ public class TransactionViewTimeFrame extends AppCompatActivity {
             diff =  " / " + elapsedDays + "d & " + elapsedHours + "h & " + elapsedMinutes + "min & " + elapsedSeconds + "sec ";
         }
         return diff;
-    }    public void Tag_as_viewed() {
+    }
+
+    public void Tag_as_viewed() {
         mo = new Ajax();
         mo.setCustomObjectListener(new Ajax.MyCustomObjectListener() {
             @Override
